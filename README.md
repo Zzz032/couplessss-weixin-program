@@ -1,6 +1,7 @@
 # 情侣日常小程序
-在[UxxHans Rainbow Cats](https://github.com/UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram)基础上进行二次开发，优
-1.优化互相布置任务的处理，添加纪念日等功能
+在[UxxHans Rainbow Cats](https://github.com/UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram)基础上进行二次开发
+
+1.优化互相布置任务的处理，添加纪念日等功能.  
 2.突破二十条任务上限.  
 3.允许上传图片.  
 
