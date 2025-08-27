@@ -1,0 +1,115 @@
+.container {
+  margin-top: 50rpx;
+  padding: 0 30rpx; /* 添加内边距防止内容贴边 */
+  position: relative; /* 为绝对定位子元素提供参考 */
+  z-index: 1; /* 确保内容在背景图之上 */
+}
+
+.cell {
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.9); /* 添加半透明白色背景 */
+  border-radius: 16rpx; /* 圆角效果 */
+  padding: 30rpx; /* 内边距 */
+  margin-bottom: 30rpx; /* 与下方内容间距 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08); /* 轻微阴影增加层次感 */
+}
+
+.form-cell_title {
+  margin-bottom: 10px;
+  font-size: 36rpx; /* 使用rpx单位 */
+  font-weight: bold; /* 加粗标题 */
+  color: #333; /* 深色文字 */
+}
+
+.form-cell_desc {
+  font-size: 28rpx; /* 使用rpx单位 */
+  color: #888; /* 比lightgray稍深的灰色 */
+  line-height: 1.6; /* 行高增加可读性 */
+}
+
+.footer {
+  width: 100%;
+  height: 100rpx; /* 使用rpx单位 */
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-top: 1rpx solid #eaeaea; /* 更细的边框 */
+  background: white; /* 白色背景 */
+  z-index: 100; /* 确保在内容之上 */
+}
+
+.footer view {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+}
+
+.list {
+  background: white;
+  color: #333;
+}
+
+.edit {
+  color: white;
+  background: #353535;
+}
+
+.picx {
+  margin-left: 40rpx;
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute; /* 绝对定位 */
+  top: 20rpx; /* 距离顶部距离 */
+  left: 0; /* 靠左 */
+}
+
+.bigpic {
+  height: 600rpx;
+  width: 800rpx;
+  position: fixed;
+  z-index: -1;
+  top: -260rpx;
+  left: -200rpx;
+  opacity: 0.8; /* 降低背景图透明度 */
+}
+
+/* 新增细节样式 */
+.detail-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.detail-label {
+  width: 160rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.detail-value {
+  flex: 1;
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+  .container {
+    margin-top: 30rpx;
+  }
+  
+  .picx {
+    height: 60rpx;
+    width: 60rpx;
+  }
+}

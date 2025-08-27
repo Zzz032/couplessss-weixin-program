@@ -1,0 +1,48 @@
+<view class="container">
+  <!-- 返回按钮 -->
+  <view class="return-container" bindtap="goBack">
+    <view class="return" style="height: {{barHeight}}px; width: {{barHeight}}px; margin-top: {{barTop+6}}px">
+      <image class="picx" src="../../images/list/back.png" />
+    </view>
+  </view>
+
+  <!-- 页面标题 - 下移了20rpx -->
+  <view class="header" style="margin-top: 150rpx">
+    <text>我们的纪念日</text>
+  </view>
+
+  <!-- 纪念日列表 - 加宽了方格 -->
+  <view class="anniversary-list">
+    <!-- 纪念日1 -->
+    <view class="anniversary-item" style="width: 92%">
+      <text class="title">认识的第一天</text>
+      <view class="timer">
+        <text>{{anniversary1.day}}</text>
+        <text>天</text>
+        <text>{{anniversary1.hour}}</text>
+        <text>时</text>
+        <text>{{anniversary1.min}}</text>
+        <text>分</text>
+        <text>{{anniversary1.sec}}</text>
+        <text>秒</text>
+      </view>
+      <text class="date">从 {{startDate1}} 开始</text>
+    </view>
+
+    <!-- 纪念日2 -->
+    <view class="anniversary-item" style="width: 92%">
+      <text class="title">开始追求的第一天</text>
+      <view class="timer">
+        <text>{{anniversary2.day}}</text>
+        <text>天</text>
+        <text>{{anniversary2.hour}}</text>
+        <text>时</text>
+        <text>{{anniversary2.min}}</text>
+        <text>分</text>
+        <text>{{anniversary2.sec}}</text>
+        <text>秒</text>
+      </view>
+      <text class="date">从 {{startDate2}} 开始</text>
+    </view>
+  </view>
+</view>

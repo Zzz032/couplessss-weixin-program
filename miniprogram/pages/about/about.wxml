@@ -1,0 +1,68 @@
+<!--pages/about/about.wxml-->
+
+<image class="bigpic" src="../../images/list/aa.png" />
+<view class="return" bindtap="goback" style="height: {{ barHeight }} px;width:{{ barHeight }} px; margin-top:{{barTop+6}}px">
+  <image class="picx" src="../../images/list/back.png" />
+</view>
+
+<view class="page__bd">
+
+
+  <view class="weui-panel weui-panel_access bd">
+
+    <view class="weui-panel__hd">更新日志</view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+
+        <view class="weui-media-box__title weui-media-box__title_in-text">2025.5.28 V1.1.0</view>
+
+        <view class="weui-media-box__desc">添加细小功能
+          </view>
+
+      </view>
+      <view class="weui-media-box weui-media-box_text">
+
+        <view class="weui-media-box__title weui-media-box__title_in-text">2025.5.26 V1.0.1</view>
+
+        <view class="weui-media-box__desc">
+          更新数据库</view>
+
+      </view>
+
+    </view>
+
+    <view class="weui-panel__bd">
+
+      <view class="weui-media-box weui-media-box_text">
+
+        <view class="weui-media-box__title weui-media-box__title_in-text">2025.5.25 V1.0.0</view>
+
+        <view class="weui-media-box__desc">
+          初始化版本</view>
+
+      </view>
+
+    </view>
+
+
+
+  </view>
+</view>
+
+<view class="weui-footer ft">
+  <view class="weui-footer__links">
+
+
+
+
+  </view>
+  <view class="weui-footer__links">
+
+    <navigator url="" class="weui-footer__link">小张同学</navigator>
+
+  </view>
+  <button style="width: 600rpx;" open-type="contact">
+    <view class="weui-footer__text">禁止小坏蛋投诉 | Developed by ZYL.</view>
+  </button>
+
+</view>

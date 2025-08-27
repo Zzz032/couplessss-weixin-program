@@ -1,0 +1,59 @@
+<image class="bigpic" src="../../images/list/aa.png" />
+<view class="return" bindtap="goback" style="height: {{ barHeight }} px;width:{{ barHeight }} px; margin-top:{{barTop+6}}px">
+  <image class="picx" src="../../images/list/back.png"/>
+</view>
+<view class="container">
+  <view class="form-group cell">
+    <view class="form-cell ">
+      <view class="form-cell_title">{{todo.title}}</view>
+      <view class="form-cell_desc">{{todo.desc}}</view>
+    </view>
+  </view>
+
+  <!-- 在这里添加details部分 -->
+  <view class="details-section">
+    <view class="detail-item">
+      <view class="detail-label">任务状态</view>
+      <view class="detail-value">{{todo.freq === 0 ? '未完成' : '已完成'}}</view>
+    </view>
+    
+    <view class="detail-item">
+      <view class="detail-label">积分奖励</view>
+      <view class="detail-value">{{todo.award}} 分</view>
+    </view>
+    
+    <view class="detail-item">
+      <view class="detail-label">截止日期</view>
+      <view class="detail-value">{{todo.date}}</view>
+    </view>
+    
+    <!-- 如果是已完成任务，显示完成情况 -->
+    <view class="completion-details" wx:if="{{todo.freq === 1 && todo.completion}}">
+      <view class="detail-item">
+        <view class="detail-label">完成描述</view>
+        <view class="detail-value">{{todo.completion.text}}</view>
+      </view>
+      
+      <view class="detail-item">
+        <view class="detail-label">完成时间</view>
+        <view class="detail-value">{{util.formatTime(todo.completion.time)}}</view>
+      </view>
+      
+      <view class="image-gallery" wx:if="{{todo.completion.images.length > 0}}">
+        <view class="gallery-title">完成图片</view>
+        <scroll-view scroll-x class="image-scroll">
+          <block wx:for="{{todo.completion.images}}" wx:key="*this">
+            <image 
+              src="{{item}}" 
+              mode="aspectFill" 
+              class="completion-image"
+              bindtap="previewImage"
+              data-url="{{item}}"
+              data-urls="{{todo.completion.images}}"
+            ></image>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

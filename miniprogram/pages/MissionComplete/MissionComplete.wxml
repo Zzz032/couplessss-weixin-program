@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="header">
+    <view class="title">任务完成证明</view>
+    <view class="mission-title">{{mission.title}}</view>
+  </view>
+  
+  <view class="form-item">
+    <view class="label">完成说明</view>
+    <textarea 
+      class="textarea" 
+      placeholder="请详细描述你是如何完成这个任务的..." 
+      value="{{completionText}}" 
+      bindinput="handleTextChange"
+      maxlength="200"
+      auto-height
+    ></textarea>
+    <view class="word-count">{{completionText.length}}/200</view>
+  </view>
+  
+  <view class="form-item">
+    <view class="label">上传凭证 ({{images.length}}/3)</view>
+    <view class="images-container">
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="image-wrapper">
+          <image src="{{item}}" mode="aspectFill" class="image"></image>
+          <view class="remove-btn" bindtap="removeImage" data-index="{{index}}">×</view>
+        </view>
+      </block>
+      <view 
+        class="add-image" 
+        bindtap="chooseImage" 
+        wx:if="{{images.length < 3}}"
+      >
+        <image src="../../images/icon-add.png" mode="aspectFit" class="add-icon" />
+      </view>
+    </view>
+  </view>
+  
+  <button 
+    class="submit-btn" 
+    bindtap="submitCompletion"
+    loading="{{isSubmitting}}"
+    disabled="{{isSubmitting}}"
+  >
+    {{isSubmitting ? '提交中...' : '提交完成证明'}}
+  </button>
+</view>
